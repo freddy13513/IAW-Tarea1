@@ -13,7 +13,7 @@ git clone https://github.com/josejuansanchez/iaw-practica-lamp.git
 cp iaw-practica-lamp/src/. /var/www/html/ -R
 cd /var/www/html
 chown www-data:www-data * -R
-apt-get install -y mysql-client-core-5.7
+apt-get install -y default-mysql-client-core
 mysql -h 172.31.32.131 -u root -proot < /tmp/iaw-practica-lamp/db/database.sql
 sed -i -e 's/localhost/192.168.33.12/' /var/www/html/config.php
 sed -i -e 's/lamp_user/root/' /var/www/html/config.php
