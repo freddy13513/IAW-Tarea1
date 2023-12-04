@@ -16,7 +16,7 @@ chown www-data:www-data * -R
 apt install mariadb-server
 systemctl start mariadb
 systemctl enable mariadb
-mysql -u root -proot < /tmp/iaw-practica-lamp/db/database.sql
+mysql localhost -u root -proot < /tmp/iaw-practica-lamp/db/database.sql
 sed -i -e 's/localhost/192.168.33.12/' /var/www/html/config.php
 sed -i -e 's/lamp_user/root/' /var/www/html/config.php
 sed -i -e 's/lamp_user/root/' /var/www/html/config.php
